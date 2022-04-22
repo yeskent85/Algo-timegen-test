@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 /*
@@ -21,6 +22,7 @@ Example:
 
 func possibleTimes(digits []int) int {
 	// Your code here
+	fmt.Println("Input: " + strconv.Itoa(digits[0]) + ", " + strconv.Itoa(digits[1]) + ", " + strconv.Itoa(digits[2]) + ", " + strconv.Itoa(digits[3]))
 	if len(digits) > 4 {
 		return 0
 	}
@@ -54,12 +56,17 @@ func possibleTimes(digits []int) int {
 					if time[0]*10+time[1] > 23 || time[2] > 6 {
 						break
 					}
+					if cnt == 0 {
+						fmt.Print("Valid times: ")
+					}
+					fmt.Print(strconv.Itoa(time[0]) + "" + strconv.Itoa(time[1]) + ":" + strconv.Itoa(time[2]) + "" + strconv.Itoa(time[3]) + " ")
 					cnt++
 					break
 				}
 			}
 		}
 	}
+	fmt.Println()
 	return cnt
 }
 
