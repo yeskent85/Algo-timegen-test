@@ -25,7 +25,7 @@ $ go run times.go
 - build executable result
 $ go build .
 
-# Program 
+# Output
 
 Input: 1, 2, 3, 4
 Valid times: 12:34 12:43 13:24 13:42 14:23 14:32 21:34 21:43 23:14 23:41
